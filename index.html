@@ -49,9 +49,12 @@
               labArry.push(label);
             }
           }
-          google.script.run
-          .withSuccessHandler(google.script.host.close)
-          .checkBoxReturn(idArry, labArry);
+          alert(labArry);
+          
+          //GAS Fulfillment here
+          //google.script.run
+          //.withSuccessHandler(google.script.host.close)
+          //.checkBoxReturn(idArry, labArry);
         }
         
         function uncheckAll(){
