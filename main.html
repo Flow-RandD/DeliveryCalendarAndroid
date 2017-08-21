@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <base target="_top">
+    <link rel="stylesheet" href="https://ssl.gstatic.com/docs/script/css/add-ons1.css">
+    <style> 
+      h5 {color: grey}
+      body {height: 90%}
+    </style>
+  <link rel="manifest" href="/manifest.json">
+  </head>
+
+  <body>
+  <header><marquee><h3>Send email to:</h3></marquee></header>
+  <h5>Please select all email receipients, if you are just providing an update to the Calendar Event, leave blank </h5>
+  
+  Sales Person: <input type="checkbox" id="0" name="Sales"><p>
+  Production: <input type="checkbox" id="1" name="Production"><p>
+  Charlie: <input type="checkbox" id="2" name="Charlie"><p>
+  Sales PC: <input type="checkbox" id="3" name="SalesPC"><p>
+  Customer: <input type="checkbox" id="4" name="Customer"><p>
+    
+<button class="action" onclick="myFunction()">Try it</button>    
+    
+<input type="button" value="Close"
+        onClick="google.script.host.close()"/>
+        
+        <script>
+        function myFunction(){          
+          var idArry = [];
+          var labArry = [];
+          for(var i = 0; i<=4; i++){
+            var id = document.getElementById(i).checked;
+            
+            idArry[i] = id;
+            if(id == true){
+              var label = document.getElementById(i).name;
+              labArry.push(label);
+            }
+          }
+          google.script.run
+          .withSuccessHandler(google.script.host.close)
+          .checkBoxReturn(idArry, labArry);
+        }
+        </script>
+    
+  </body>
+</html>
