@@ -18,21 +18,24 @@
     <style> 
       h5 {color: grey}
       body {height: 90%}
+      div {width: 90%;
+       float: right}
     </style>
   </head>
 
   <body>
   <header><marquee><h3>Send email to:</h3></marquee></header>
-  <h5>Please select all email receipients, if you are just providing an update to the Calendar Event, leave blank </h5>
+    <div>
+    <h5>Please select all email receipients, if you are just providing an update to the Calendar Event, leave blank </h5>
   
-  Sales Person: <input type="checkbox" id="0" name="Sales"><p>
-  Production: <input type="checkbox" id="1" name="Production"><p>
-  Charlie: <input type="checkbox" id="2" name="Charlie"><p>
-  Sales PC: <input type="checkbox" id="3" name="SalesPC"><p>
-  Customer: <input type="checkbox" id="4" name="Customer"><p>
+    Sales Person: <input type="checkbox" id="0" name="Sales"><p>
+    Production: <input type="checkbox" id="1" name="Production"><p>
+    Charlie: <input type="checkbox" id="2" name="Charlie"><p>
+    Sales PC: <input type="checkbox" id="3" name="SalesPC"><p>
+    Customer: <input type="checkbox" id="4" name="Customer"><p>
     
-<button class="action" onclick="myFunction()">Try it</button>    
-<button class="Close" onclick="uncheckAll()">Clear</button>    
+    <button class="action" onclick="myFunction()">Try it</button>    
+    <button class="Close" onclick="uncheckAll()">Clear</button>    
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
         <script>
@@ -60,6 +63,6 @@
         $('input[type="checkbox"]:checked').prop('checked',false);
         }
         </script>
-    
+    </div>
   </body>
 </html>
