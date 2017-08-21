@@ -19,6 +19,7 @@
     "type": "image/png",
     "sizes": "192x192"
   }],
+  "background_color": "#0275d8",
   "start_url": "https://flow-randd.github.io/DeliveryCalendarAndroid/",
   "display": "fullscreen",
   "theme_color": "#0275d8"
