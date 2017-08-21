@@ -23,8 +23,8 @@
     
 <button class="action" onclick="myFunction()">Try it</button>    
     
-<input type="button" value="Close"
-        onClick="google.script.host.close()"/>
+<input type="button" value="Clear"
+        onclick="uncheckAll"/>
         
         <script>
         function myFunction(){          
@@ -42,6 +42,10 @@
           google.script.run
           .withSuccessHandler(google.script.host.close)
           .checkBoxReturn(idArry, labArry);
+        }
+        
+        function uncheckAll(){
+        $('input[type="checkbox"]:checked').prop('checked',false);
         }
         </script>
     
