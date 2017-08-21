@@ -3,19 +3,19 @@
   "short_name": "AndCal",
   "lang": "en-GB",
   "icons": [{
-    "src": "Images/calendar.png",
+    "src": "images/calendar.png",
     "type": "image/png",
     "sizes": "128x128"
   }, {
-    "src": "Images/calendar.png",
+    "src": "images/calendar.png",
     "type": "image/png",
     "sizes": "152x152"
   }, {
-    "src": "Images/calendar.png",
+    "src": "images/calendar.png",
     "type": "image/png",
     "sizes": "144x144"
   }, {
-    "src": "Images/calendar.png",
+    "src": "images/calendar.png",
     "type": "image/png",
     "sizes": "192x192"
   }],
