@@ -12,6 +12,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="msapplication-starturl" content="https://flow-randd.github.io/DeliveryCalendarAndroid/">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+  <meta name="google-signin-client_id" content="726563846620-uardumbvi7kfnck8gkdkhq0vaclr70ea.apps.googleusercontent.com">
   
   <base target="_top">
     <link rel="stylesheet" href="https://ssl.gstatic.com/docs/script/css/add-ons1.css">
@@ -27,7 +29,9 @@
   <header><marquee><h3>Send email to:</h3></marquee></header>
     <div>
     <h5>Please select all email receipients, if you are just providing an update to the Calendar Event, leave blank </h5>
-  
+      
+  <form action="https://script.googleapis.com/v1/scripts/1zRSNml0mF5N1PsmgDrXlWtsS_6_ccO9wuNahw5tKUMgNJfiLvezYpzq9:run" method="post">
+    
     Sales Person: <input type="checkbox" id="0" name="Sales"><p>
     Production: <input type="checkbox" id="1" name="Production"><p>
     Charlie: <input type="checkbox" id="2" name="Charlie"><p>
@@ -35,9 +39,13 @@
     Customer: <input type="checkbox" id="4" name="Customer"><p>
     
     <button class="action" onclick="myFunction()">Try it</button>    
-    <button class="Close" onclick="uncheckAll()">Clear</button>    
+    <button class="Close" onclick="uncheckAll()">Clear</button>
+    <input type="submit" value="Submit">
+    <div class="g-signin2" data-onsuccess="onSignIn"></div>
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    
         <script>
         function myFunction(){          
           var idArry = [];
