@@ -165,7 +165,7 @@
       function listSOR() {
         gapi.client.sheets.spreadsheets.values.get({
           spreadsheetId: '1TP7GNpdHa5m7Ep984NI20Q9J-QanTKdoNanCraPnwzY',
-          range: 'JOBS!A3:B',
+          range: 'JOBS!A3:E',
         }).then(function(response) {
           var range = response.result;
           if (range.values.length > 0) {
@@ -173,7 +173,7 @@
             for (i = 0; i < range.values.length; i++) {
               var row = range.values[i];
               // Print columns A and E, which correspond to indices 0 and 4.
-              appendPre(row[0] + ', ' + row[1]);
+              appendPre(row[0] + ', ' + row[4]);
             }
           } else {
             appendPre('No data found.');
