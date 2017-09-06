@@ -36,7 +36,6 @@
     
     <button class="action" onclick="myFunction()">Try it</button>    
     <button class="Close" onclick="uncheckAll()">Clear</button>
-    <input type="submit" value="Submit">
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="https://apis.google.com/js/platform.js" async defer></script>
@@ -57,11 +56,9 @@
           alert(labArry);
           
           //GAS Fulfillment here
+          callScriptFunction();
           //POST https://script.googleapis.com/v1/scripts/[SCRIPT ID]:run
           
-          //google.script.run
-          //.withSuccessHandler(google.script.host.close)
-          //.checkBoxReturn(idArry, labArry);
         }
         
         function uncheckAll(){
@@ -70,7 +67,7 @@
         </script>
         
     <!--GOOGLE QUICKSTART CODE-->          
-       <!--Add buttons to initiate auth sequence and sign out-->
+    <!--Add buttons to initiate auth sequence and sign out-->
     <button id="authorize-button" style="display: none;">Authorize</button>
     <button id="signout-button" style="display: none;">Sign Out</button>
 
@@ -125,7 +122,7 @@
         if (isSignedIn) {
           authorizeButton.style.display = 'none';
           signoutButton.style.display = 'block';
-          callScriptFunction();
+          //callScriptFunction();
         } else {
           authorizeButton.style.display = 'block';
           signoutButton.style.display = 'none';
