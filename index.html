@@ -165,7 +165,7 @@
       function listSOR() {
         gapi.client.sheets.spreadsheets.values.get({
           spreadsheetId: '1TP7GNpdHa5m7Ep984NI20Q9J-QanTKdoNanCraPnwzY',
-          range: 'JOBS!A3:E',
+          range: 'JOBS!A3:B3',
         }).then(function(response) {
           var range = response.result;
           if (range.values.length > 0) {
