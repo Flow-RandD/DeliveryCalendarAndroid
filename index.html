@@ -36,7 +36,7 @@
     
     <form>
     SOR:<br>
-    <input type="text" name="SOR"><br>
+    <input type="text" id="SOR" name="SOR"><br>
     </form>
     
     <button class="action" onclick="myFunction()">Try it</button>    
@@ -165,7 +165,10 @@
        */
       function callScriptFunction() {
         var scriptId = "1zjO2CihIJpF4G6yxlX1a_U3Yd2V2L-dqC8dU1ce8tbrLCdnlJN06bTWv";
-
+        
+        //Get SOR from HTML
+        var SOR = document.getElementById("SOR");
+        
         // Call the Execution API run method
         //   'scriptId' is the URL parameter that states what script to run
         //   'resource' describes the run request body (with the function name
@@ -176,7 +179,7 @@
             'function': 'sorFromSheet',
               'parameters': 
               [
-                'messageIn'
+                SOR
               ]
           }
         }).then(function(resp) {
