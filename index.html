@@ -33,14 +33,16 @@
     <input type="text" id="SOR" name="SOR"><br><br>
     </form>
     
-    Sales Person: <input type="checkbox" id="0" name="Sales"><p>
-    Production: <input type="checkbox" id="1" name="Production"><p>
-    Charlie: <input type="checkbox" id="2" name="Charlie"><p>
-    Sales PC: <input type="checkbox" id="3" name="SalesPC"><p>
-    Customer: <input type="checkbox" id="4" name="Customer"><p>
+    <pre id="content">
+    Sales Person: <input type="checkbox" id="0" name="Sales"><br>
+    Production: <input type="checkbox" id="1" name="Production"><br>
+    Charlie: <input type="checkbox" id="2" name="Charlie"><br>
+    Sales PC: <input type="checkbox" id="3" name="SalesPC"><br>
+    Customer: <input type="checkbox" id="4" name="Customer"><br>
+    </pre>
     
     <button class="action" onclick="myFunction()">Get Update</button>    
-    <button class="Close" onclick="uncheckAll()">Clear</button>
+    <button class="Close" onclick="uncheckAll()">Clear</button><p><br><p>
       
     <!--Add buttons to initiate auth sequence and sign out-->
     <button id="authorize-button" style="display: none;">Authorize</button>
@@ -77,10 +79,7 @@
         }
         </script>
         
-    <!--GOOGLE QUICKSTART CODE-->          
-
-    <pre id="content"></pre>
-
+    <!--GOOGLE QUICKSTART CODE-->         
     <script type="text/javascript">
       // Client ID and API key from the Developer Console
       var CLIENT_ID = '354928838315-dim8ldmta77ceuoh3mracsg2m86p28p8.apps.googleusercontent.com';
@@ -171,7 +170,9 @@
         
         //Get SOR from HTML
         var SOR = document.getElementById("SOR").value;
-
+        //Clear checkboxes (pre) ready for response
+        $('pre').html('');
+        
         // Call the Execution API run method
         //   'scriptId' is the URL parameter that states what script to run
         //   'resource' describes the run request body (with the function name
