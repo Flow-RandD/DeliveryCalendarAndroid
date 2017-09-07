@@ -28,16 +28,16 @@
     <div>
     <h5>Please select all email receipients, if you are just providing an update to the Calendar Event, leave blank </h5>
     
+    <form>
+    SOR:<br>
+    <input type="text" id="SOR" name="SOR"><br><br>
+    </form>
+    
     Sales Person: <input type="checkbox" id="0" name="Sales"><p>
     Production: <input type="checkbox" id="1" name="Production"><p>
     Charlie: <input type="checkbox" id="2" name="Charlie"><p>
     Sales PC: <input type="checkbox" id="3" name="SalesPC"><p>
     Customer: <input type="checkbox" id="4" name="Customer"><p>
-    
-    <form>
-    SOR:<br>
-    <input type="text" id="SOR" name="SOR"><br>
-    </form>
     
     <button class="action" onclick="myFunction()">Try it</button>    
     <button class="Close" onclick="uncheckAll()">Clear</button>
@@ -68,6 +68,7 @@
         
         function uncheckAll(){
         $('input[type="checkbox"]:checked').prop('checked',false);
+        $('input[type="text"], textarea').val('');
         }
         </script>
         
@@ -168,7 +169,7 @@
         
         //Get SOR from HTML
         var SOR = document.getElementById("SOR").value;
-        alert(SOR);
+
         // Call the Execution API run method
         //   'scriptId' is the URL parameter that states what script to run
         //   'resource' describes the run request body (with the function name
@@ -215,6 +216,7 @@
 
             var sorSet = result.response.result;
             alert(sorSet);
+            appendPre(sorSet);
             //if (Object.keys(folderSet).length == 0) {
             //    appendPre('No folders returned!');
             //} else {
