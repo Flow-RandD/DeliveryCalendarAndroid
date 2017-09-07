@@ -20,6 +20,7 @@
       body {height: 90%}
       div {width: 90%;
        float: right}
+      div2 {width: 90%}
     </style>
   </head>
 
@@ -74,7 +75,13 @@
         </script>
         
     <!--GOOGLE QUICKSTART CODE-->          
+    <!--Add buttons to initiate auth sequence and sign out-->
+    <div2>  
+      <button id="authorize-button" style="display: none;">Authorize</button>
+      <button id="signout-button" style="display: none;">Sign Out</button>
+    </div2>
 
+    <pre id="content"></pre>
 
     <script type="text/javascript">
       // Client ID and API key from the Developer Console
@@ -234,10 +241,5 @@
     </script>
         
     </div>
-        <!--Add buttons to initiate auth sequence and sign out-->
-        <button id="authorize-button" style="display: none;">Authorize</button>
-        <button id="signout-button" style="display: none;">Sign Out</button>
-
-        <pre id="content"></pre>
   </body>
 </html>
