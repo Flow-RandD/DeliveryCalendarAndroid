@@ -41,7 +41,7 @@
     Charlie: <input type="checkbox" id="2" name="Charlie"><br>
     Sales PC: <input type="checkbox" id="3" name="SalesPC"><br>
     Customer: <input type="checkbox" id="4" name="Customer"><br>
-    </div2>
+    </div2><p>
     
     <button class="action" onclick="myFunction()">Get Update</button>    
     <button class="Close" onclick="uncheckAll()">Clear</button><p><br><p>
@@ -160,8 +160,9 @@
        */
       function appendPre(message) {
         var div2 = document.getElementById('content');
-        var textContent = document.createTextNode(message + '\n');
-        div2.appendChild(textContent);
+        $('div2').html(message);
+        //var textContent = document.createTextNode(message + '\n');
+        //div2.appendChild(textContent);
       }
 
       /**
