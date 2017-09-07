@@ -41,7 +41,7 @@
     Charlie: <input type="checkbox" id="2" name="Charlie"><br>
     Sales PC: <input type="checkbox" id="3" name="SalesPC"><br>
     Customer: <input type="checkbox" id="4" name="Customer"><br>
-    </div2><p>
+    </div2><p><br>
     
     <pre id="content"></pre>
       
@@ -176,7 +176,7 @@
         var SOR = document.getElementById("SOR").value;
         //Clear checkboxes & set pre ready for response
         $('div2').html('');
-        $('pre').html('Loading...');
+        //$('pre').html('Loading...');
         
         
         // Call the Execution API run method
@@ -224,7 +224,7 @@
             // is treated as a JavaScript object (folderSet).
 
             var sorSet = result.response.result;
-            //alert(sorSet);
+            alert(sorSet);
             appendPre(sorSet);
             //if (Object.keys(folderSet).length == 0) {
             //    appendPre('No folders returned!');
