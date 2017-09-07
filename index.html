@@ -35,13 +35,13 @@
     <input type="text" id="SOR" name="SOR"><br><br>
     </form>
     
-    <pre id="content">
+    <div2 id="content">
     Sales Person: <input type="checkbox" id="0" name="Sales"><br>
     Production: <input type="checkbox" id="1" name="Production"><br>
     Charlie: <input type="checkbox" id="2" name="Charlie"><br>
     Sales PC: <input type="checkbox" id="3" name="SalesPC"><br>
     Customer: <input type="checkbox" id="4" name="Customer"><br>
-    </pre>
+    </div2>
     
     <button class="action" onclick="myFunction()">Get Update</button>    
     <button class="Close" onclick="uncheckAll()">Clear</button><p><br><p>
@@ -159,9 +159,9 @@
        * @param {string} message Text to be placed in pre element.
        */
       function appendPre(message) {
-        var pre = document.getElementById('content');
+        var div2 = document.getElementById('content');
         var textContent = document.createTextNode(message + '\n');
-        pre.appendChild(textContent);
+        div2.appendChild(textContent);
       }
 
       /**
@@ -173,7 +173,7 @@
         //Get SOR from HTML
         var SOR = document.getElementById("SOR").value;
         //Clear checkboxes (pre) ready for response
-        $('pre').html('Loading...');
+        $('div2').html('Loading...');
         
         // Call the Execution API run method
         //   'scriptId' is the URL parameter that states what script to run
