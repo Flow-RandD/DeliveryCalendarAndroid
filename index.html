@@ -20,6 +20,8 @@
       body {height: 90%}
       div {width: 90%;
        float: right}
+      pre {width: 90%;
+       float: right}
     </style>
   </head>
 
@@ -64,7 +66,7 @@
               labArry.push(label);
             }
           }
-          alert(labArry);
+          //alert(labArry);
           
           //GAS Fulfillment here
           callScriptFunction();
@@ -171,7 +173,7 @@
         //Get SOR from HTML
         var SOR = document.getElementById("SOR").value;
         //Clear checkboxes (pre) ready for response
-        $('pre').html('');
+        $('pre').html('Loading...');
         
         // Call the Execution API run method
         //   'scriptId' is the URL parameter that states what script to run
@@ -218,7 +220,7 @@
             // is treated as a JavaScript object (folderSet).
 
             var sorSet = result.response.result;
-            alert(sorSet);
+            //alert(sorSet);
             appendPre(sorSet);
             //if (Object.keys(folderSet).length == 0) {
             //    appendPre('No folders returned!');
