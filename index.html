@@ -20,7 +20,6 @@
       body {height: 90%}
       div {width: 90%;
        float: right}
-      div2 {width: 90%}
     </style>
   </head>
 
@@ -40,8 +39,12 @@
     Sales PC: <input type="checkbox" id="3" name="SalesPC"><p>
     Customer: <input type="checkbox" id="4" name="Customer"><p>
     
-    <button class="action" onclick="myFunction()">Try it</button>    
+    <button class="action" onclick="myFunction()">Get Update</button>    
     <button class="Close" onclick="uncheckAll()">Clear</button>
+      
+    <!--Add buttons to initiate auth sequence and sign out-->
+    <button id="authorize-button" style="display: none;">Authorize</button>
+    <button id="signout-button" style="display: none;">Sign Out</button>
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="https://apis.google.com/js/platform.js" async defer></script>
@@ -75,11 +78,6 @@
         </script>
         
     <!--GOOGLE QUICKSTART CODE-->          
-    <!--Add buttons to initiate auth sequence and sign out-->
-    <div2>  
-      <button id="authorize-button" style="display: none;">Authorize</button>
-      <button id="signout-button" style="display: none;">Sign Out</button>
-    </div2>
 
     <pre id="content"></pre>
 
