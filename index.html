@@ -214,11 +214,12 @@
       
     <script>
       function timeOut(){
-      if ($('pre').html==='Loading...'){
-      setTimeout(function(){ alert("It seems you may not have permission to view this information");},3000);
-      }else{
-      setTimeout(function(){ alert("Chocolate Starfish");},3000);
-      }
+        var preState = document.getElementById('content').innerHTML
+        if (preState==='Loading...'){
+          setTimeout(function(){ alert("It seems you may not have permission to view this information");},3000);
+          }else{
+          setTimeout(function(){ alert("Chocolate Starfish");},3000);
+          }
       }
     </script>
 
