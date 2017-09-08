@@ -1,21 +1,21 @@
 {
-  "name": "Android Calendar",
-  "short_name": "AndCal",
+  "name": "SOR Update",
+  "short_name": "sorUP",
   "lang": "en-GB",
   "icons": [{
-    "src": "images/calendar.png",
+    "src": "images/Flowstore_Logo_CUT OUT_v1.png",
     "type": "image/png",
     "sizes": "128x128"
   }, {
-    "src": "images/calendar.png",
+    "src": "images/Flowstore_Logo_CUT OUT_v1.png",
     "type": "image/png",
     "sizes": "152x152"
   }, {
-    "src": "images/calendar.png",
+    "src": "images/Flowstore_Logo_CUT OUT_v1.png",
     "type": "image/png",
     "sizes": "144x144"
   }, {
-    "src": "images/calendar.png",
+    "src": "images/Flowstore_Logo_CUT OUT_v1.png",
     "type": "image/png",
     "sizes": "192x192"
   }],
