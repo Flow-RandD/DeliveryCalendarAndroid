@@ -204,7 +204,7 @@
             // Script function returns. Here, the function returns an Apps
             // Script Object with String keys and values, and so the result
             // is treated as a JavaScript object (folderSet).
-
+            clearTimeout(myTimeOut);
             var sorSet = result.response.result;
             $('pre').html('');
             appendPre(sorSet);
@@ -217,7 +217,7 @@
     <script>
     function timeOut(){
         var preState = document.getElementById('content').innerHTML
-          setTimeout(function(){
+        var myTimeOut = setTimeout(function(){
             if (preState==='Loading...'){
               alert("It seems you may not have permission to view this information");
               $('pre').html('Get outta here, ya filthy animal!');
