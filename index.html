@@ -148,6 +148,21 @@
       }
 
       /**
+      *Timout function positioned here for variable definition before callScriptFunction
+      */
+      function timeOut(){
+        var preState = document.getElementById('content').innerHTML
+        var myTimeOut = setTimeout(function(){
+            if (preState==='Loading...'){
+              alert("It seems you may not have permission to view this information");
+              $('pre').html('Get outta here, ya filthy animal!');
+            }else{
+            }
+          },6000);
+      }
+      
+      
+      /**
        * Load the API and make an API call.  Display the results on the screen.
        */
       function callScriptFunction() {
@@ -210,17 +225,6 @@
             appendPre(sorSet);
           }
         });
-      }
-
-    function timeOut(){
-        var preState = document.getElementById('content').innerHTML
-        var myTimeOut = setTimeout(function(){
-            if (preState==='Loading...'){
-              alert("It seems you may not have permission to view this information");
-              $('pre').html('Get outta here, ya filthy animal!');
-            }else{
-            }
-          },6000);
       }
     </script>
 
