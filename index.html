@@ -34,7 +34,7 @@
     <input type="text" id="SOR" name="SOR"><br><br>
     </form>
     
-    <div2>
+    <div2 id="div2">
     Sales Person: <input type="checkbox" id="0" name="Sales"><br>
     Production: <input type="checkbox" id="1" name="Production"><br>
     Charlie: <input type="checkbox" id="2" name="Charlie"><br>
@@ -79,6 +79,7 @@
         $('input[type="checkbox"]:checked').prop('checked',false);
         $('input[type="text"], textarea').val('');
         $('#content').empty();
+        document.getElementById('div2').style.display = 'block';
         }
         </script>
         
@@ -174,8 +175,8 @@
         //Get SOR from HTML
         var SOR = document.getElementById("SOR").value;
         //Clear checkboxes & set pre ready for response
-        $('div2').html('');
-        //$('pre').html('Loading...');
+        document.getElementById('div2').style.display = 'block';
+        $('pre').html('Loading...');
         
         
         // Call the Execution API run method
@@ -223,16 +224,8 @@
             // is treated as a JavaScript object (folderSet).
 
             var sorSet = result.response.result;
-            alert(sorSet);
+            $('pre').html('');
             appendPre(sorSet);
-            //if (Object.keys(folderSet).length == 0) {
-            //    appendPre('No folders returned!');
-            //} else {
-            //  appendPre('Folders under your root folder:');
-            //  Object.keys(folderSet).forEach(function(id){
-            //    appendPre('\t' + folderSet[id] + ' (' + id  + ')');
-            //  });
-            //}
           }
         });
       }
