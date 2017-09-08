@@ -213,6 +213,8 @@
     </script>
       
     <script>
+      document.getElementById('content').innerHTML.addEventListener("onchange",timeOut);
+      
       function timeOut(){
         var preState = document.getElementById('content').innerHTML
         if (preState==='Loading...'){
