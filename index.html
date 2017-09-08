@@ -152,7 +152,7 @@
       */
       function timeOut(){
         var preState = document.getElementById('content').innerHTML
-        var myTimeOut = setTimeout(function(){
+        myTimeout = setTimeout(function(){
             if (preState==='Loading...'){
               alert("It seems you may not have permission to view this information");
               $('pre').html('Get outta here, ya filthy animal!');
@@ -219,7 +219,7 @@
             // Script function returns. Here, the function returns an Apps
             // Script Object with String keys and values, and so the result
             // is treated as a JavaScript object (folderSet).
-            clearTimeout(myTimeOut);
+            clearTimeout(myTimeout);
             var sorSet = result.response.result;
             $('pre').html('');
             appendPre(sorSet);
