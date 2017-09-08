@@ -44,7 +44,7 @@
     <button class="Close" onclick="uncheckAll()">Clear</button><p><br><p>
       
     <!--Add buttons to initiate auth sequence and sign out-->
-    <button id="authorize-button" style="display: none;">Authorize</button>
+    <button id="authorize-button" style="display: none;">Authorise</button>
     <button id="signout-button" style="display: none;">Sign Out</button>
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
@@ -154,7 +154,7 @@
         var preState = document.getElementById('content').innerHTML
         myTimeout = setTimeout(function(){
             if (preState==='Loading...'){
-              alert("It seems you may not have permission to view this information");
+              alert("It seems you may not have permission to view this information, or you haven't authorised this app.");
               $('pre').html('Get outta here, ya filthy animal!');
             }else{
             }
