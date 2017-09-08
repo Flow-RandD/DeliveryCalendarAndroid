@@ -52,23 +52,8 @@
     
         <script>
         function myFunction(){          
-          var idArry = [];
-          var labArry = [];
-          for(var i = 0; i<=4; i++){
-            var id = document.getElementById(i).checked;
-            
-            idArry[i] = id;
-            if(id == true){
-              var label = document.getElementById(i).name;
-              labArry.push(label);
-            }
-          }
-          //alert(labArry);
-          
           //GAS Fulfillment here
           callScriptFunction();
-          //POST https://script.googleapis.com/v1/scripts/[SCRIPT ID]:run
-          
         }
         
         function uncheckAll(){
