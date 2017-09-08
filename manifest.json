@@ -19,8 +19,8 @@
     "type": "image/png",
     "sizes": "192x192"
   }],
-  "background_color": "#b3ffff",
+  "background_color": "#ffff00",
   "start_url": "https://flow-randd.github.io/sorUpdate/",
   "display": "fullscreen",
-  "theme_color": "#0275d8"
+  "theme_color": "#b3ffff"
 }
