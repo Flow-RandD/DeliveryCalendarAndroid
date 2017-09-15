@@ -81,10 +81,10 @@
         }
         
         function uncheckAll(){
-        $('input[type="checkbox"]:checked').prop('checked',false);
+        //$('input[type="checkbox"]:checked').prop('checked',false);
         $('input[type="text"], textarea').val('');
         $('#content').empty();
-        document.getElementById('div2').style.display = 'block';
+        document.getElementById('content').style.display = 'block';
         }
     </script>
         
@@ -195,7 +195,7 @@
         //Get SOR from HTML
         var SOR = document.getElementById("SOR").value;
         //Clear checkboxes & set pre ready for response
-        document.getElementById('content').style.display = 'none';
+        //document.getElementById('content').style.display = 'none';
         $('pre').html('Loading...');
         //Call timeOut function
         timeOut();
