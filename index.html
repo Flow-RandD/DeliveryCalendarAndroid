@@ -17,31 +17,45 @@
     <link rel="stylesheet" href="https://ssl.gstatic.com/docs/script/css/add-ons1.css">
     <style> 
       h5 {color: grey}
-      body {height: 90%;
+      html, body {height: 90%;
         background: #FFFFFF;
         padding: 0px;
-        height: 99%;
+        height: 100%;
         width: 99%;
         margin: auto
+        background: #FFFFFF; /* For browsers that do not support gradients */
+        background: -webkit-linear-gradient(rgba(179,255,255,1), white);
+        background: -moz-linear-gradient(rgba(179,255,255,1), white);
+        background: -o-linear-gradient(rgba(179,255,255,1), white);
+        background: linear-gradient(rgba(179,255,255,1), white 70%);
       }
-      div {  
+      #div1 {  
         border-radius: 25px;
-        background: #F7F7F7;
         padding: 10px;
         height: auto;
         width: auto;
         margin: auto
-        }
+      }
+      #div2 {
+        border-radius: 5px;
+        border: 1px groove;
+        padding: 40px;
+        background: white;
+        height: auto;
+        width: auto;
+        margin: auto
+      }
       pre {width: auto;
         margin: auto
-        }
+      }
     </style>
+    <img src="https://flow-randd.github.io/sorUpdate/images/Flowstore_Logo_CUT OUT_v1.png" alt="FLOWSTORE SYSTEMS LTD." style="width:90%">
   </head>
 
   <body>
   <bodyInner>  
   <header><marquee><h3>Get SOR Update</h3></marquee></header>
-    <div>
+    <div id="div1">
     <h5>Please type the SOR you want an update on</h5>
     
     <form>
@@ -49,23 +63,21 @@
     <input type="text" id="SOR" name="SOR" style="width:50%"><br><br>
     </form>
     
-    <div2 id="div2">
-    <img src="https://flow-randd.github.io/sorUpdate/images/Flowstore_Logo_CUT OUT_v1.png" alt="FLOWSTORE SYSTEMS LTD." style="width:90%">
-    </div2>
+    <div id="div2"><pre id="content"></pre></div><p>
     
-    <pre id="content"></pre>
-      
+    <div id="clickers">  
     <button class="action" onclick="myFunction()">Get Update</button>    
     <button class="Close" onclick="uncheckAll()">Clear</button><p><br><p>
       
     <!--Add buttons to initiate auth sequence and sign out-->
     <button id="authorize-button" style="display: none;">Authorise</button><p>
     <button id="signout-button" style="display: none;">Sign Out</button>
-    
+    </div>
+      
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="https://apis.google.com/js/platform.js" async defer></script>
     
-        <script>
+    <script>
         function myFunction(){          
           //GAS Fulfillment here
           callScriptFunction();
@@ -77,7 +89,7 @@
         $('#content').empty();
         document.getElementById('div2').style.display = 'block';
         }
-        </script>
+    </script>
         
     <!--GOOGLE QUICKSTART CODE-->         
     <script type="text/javascript">
