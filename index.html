@@ -70,6 +70,7 @@
     </form>
     
     <pre id="content"></pre><p>
+      <div id="image2"></div><p>
       
     <div id="clickers">  
     <button class="action" onclick="myFunction()">Get Update</button>    
@@ -189,6 +190,7 @@
             if (preState==='Loading...'){
               alert("It seems you may not have permission to view this information, or you haven't authorised this app.");
               $('pre').html('Get outta here, ya filthy animal!');
+              $('#image2').html('<img src="https://media.giphy.com/media/10K7FlHoiA8Cpq/giphy.gif" alt="Loading" />');
             }else{
             }
           },6000);
