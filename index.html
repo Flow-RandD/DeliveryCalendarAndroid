@@ -34,26 +34,7 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
 	
-  	<!--bodyInner-->
-	<nav class="navbar fixed-top navbar-light bg-light" style="padding-top:1px !important; padding-bottom:1px !important;">
-  		<a class="navbar-brand" href="index.html">
-			<img src="favicon.ico" width="30" height="30" alt="">
-		</a>
-		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-    			<span class="navbar-toggler-icon"></span>
-  		</button>
-  		<div class="collapse navbar-collapse" id="navbarText">
-    			<ul class="navbar-nav mr-auto">
-      				<li class="nav-item active">
-        				<a class="nav-link" href="index.html">Home<span class="sr-only">(current)</span></a>
-      				</li>
-				      <li class="nav-item">
-        				<a class="nav-link" href="help.html">Help</a>
-      				</li>
-    			</ul>
-  		</div>
-	</nav>
-	  
+  	<!--bodyInner-->	  
 	<div class="jumbotron jumbotron-fluid" style="background-color: #b3ffff;">
 		<div class="container"></div>
 			<img class="container-fluid" src="https://flow-randd.github.io/calendarUpdate/images/Flowstore_Logo_CUT OUT_v1.png" alt="FLOWSTORE SYSTEMS LTD.">
@@ -81,6 +62,18 @@
     <button class="btn btn-info" id="authorize-button" style="display: none;">Authorise</button><p>
     <button class="btn btn-dark" id="signout-button" style="display: none;">Sign Out</button>
     </div>
+	    
+	<nav class="navbar fixed-bottom navbar-light bg-light" style="padding-bottom:5px">
+		<a class="navbar ml-auto">
+			<small class="text-muted">
+				<a class="font-italic">
+					Copyright &copy; 
+						<script>document.write(new Date().getFullYear())</script><!--a id="crYr" onload="getFullYear">YEAR</a--> 
+						Sam Walker
+				</a>
+			</small>
+		</a>
+	  </nav>
       
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="https://apis.google.com/js/platform.js" async defer></script>
