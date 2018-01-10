@@ -52,7 +52,7 @@
         </form>
     
     <pre id="content"></pre><p>
-      <div id="image2"></div><p>
+      <iframe id="image2"></iframe><p>
       
     <div id="clickers">  
     <button class="btn btn-primary" onclick="myFunction()">Get Update</button>    
@@ -196,7 +196,7 @@
             if (preState==='Loading...'){
               alert("It seems you may not have permission to view this information, or you haven't authorised this app.");
               $('pre').html('ah ah ah!');
-              $('#image2').html('<img src="https://giphy.com/gifs/no-jurassic-park-dennis-nedry-5ftsmLIqktHQA" alt="Loading" />');
+              $('#image2').html('<iframe src="https://giphy.com/embed/5ftsmLIqktHQA" alt="Loading" />');
             }else{
             }
           },10000);
